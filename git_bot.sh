@@ -6,11 +6,10 @@ sleep 1
 
 echo "Do you wish to put all files in x mode?  (y / n)"
 read wish 
-if [$wish == 'y']then ;
-do 
+if [ $wish == 'y' ]; then
     echo "Putting all files in x mode..."
     chmod +x *
-    sleep 2
+    sleep 1
 else
     echo "This is an invalid standard input."
     exit 0
@@ -22,7 +21,7 @@ git add .
 git commit -m $message
 git push
 clear 
-sleep 3
+sleep 2
 
 echo "I need to see if your script gets pushed or not" 
 git status
