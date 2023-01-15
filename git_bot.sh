@@ -10,10 +10,12 @@ if [ $wish == 'y' ]; then
     echo "Putting all files in x mode..."
     chmod +x *
     sleep 1
-else
-    echo "This is an invalid standard input."
-    exit 0
 fi 
+
+if [ $wish == 'n' ]; then
+    echo "Skipping x mode..."
+fi 
+sleep 2
 
 echo "Enter your commit message for push..."
 read message 
